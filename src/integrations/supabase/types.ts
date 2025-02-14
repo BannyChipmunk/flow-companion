@@ -9,6 +9,30 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      api_secrets: {
+        Row: {
+          created_at: string | null
+          id: string
+          key_name: string
+          key_value: string
+          updated_at: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          key_name: string
+          key_value: string
+          updated_at?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          key_name?: string
+          key_value?: string
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       cycle_entries: {
         Row: {
           created_at: string
@@ -216,7 +240,12 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_api_key: {
+        Args: {
+          key_name: string
+        }
+        Returns: string
+      }
     }
     Enums: {
       cycle_phase: "menstrual" | "follicular" | "ovulation" | "luteal"

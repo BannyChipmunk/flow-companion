@@ -17,6 +17,8 @@ export type Database = {
           id: string
           notes: string | null
           phase: Database["public"]["Enums"]["cycle_phase"] | null
+          phase_details: Json | null
+          timing_status: string | null
           updated_at: string
           user_id: string
         }
@@ -27,6 +29,8 @@ export type Database = {
           id?: string
           notes?: string | null
           phase?: Database["public"]["Enums"]["cycle_phase"] | null
+          phase_details?: Json | null
+          timing_status?: string | null
           updated_at?: string
           user_id: string
         }
@@ -37,6 +41,8 @@ export type Database = {
           id?: string
           notes?: string | null
           phase?: Database["public"]["Enums"]["cycle_phase"] | null
+          phase_details?: Json | null
+          timing_status?: string | null
           updated_at?: string
           user_id?: string
         }

@@ -55,6 +55,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        dark: {
+          text: {
+            primary: "#F1F1F1",
+            secondary: "#C8C8C9",
+            muted: "#8E9196",
+          },
+          background: {
+            primary: "#1A1F2C",
+            secondary: "#222222",
+          },
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
